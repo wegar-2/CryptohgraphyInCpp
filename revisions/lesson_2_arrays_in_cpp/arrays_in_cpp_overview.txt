@@ -1,0 +1,29 @@
+
+
+This is brief summary of most important issues that pop up when dealing with cpp arrays.
+
+
+# ==================================================================================================
+I. standard stack arrays
+I.1. declare an array:
+	int ArrayOfIntegers[100];
+I.2. assign to the array, access array element
+	ArrayOfIntegers[10] = 323;
+	ArrayOfIntegers[13];
+I.3. stack array vs pointer:
+	the variable ArrayOfIntegers is a pointer to the first element of the array
+
+
+
+II. array of pointers to heap object (i.e. objects stored on heap)
+II.1. create array of pointers:
+	int* ArrayOfPointersToIntegers[10];
+II.2. access array element --- every element of this array is a pointer!
+	ArrayOfPointersToIntegers[4];
+II.3. access value stored in the place in memory that is pointed at by the array member:
+	
+
+
+
+III. heap array (array created on the heap)
+

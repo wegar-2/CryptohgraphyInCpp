@@ -1,0 +1,52 @@
+The four steps of compilation of a C++ program:
+1. pre-processor resolves all the #-include directives (#include ...)
+2. compiler translates the code into assembler *.s file
+3. Assembler assembles the assembler file into object code file *.
+4. Linker does the linking of against the libraries used
+
+
+
+# ===================================================================================
+Suppose that the file with the program code is program1.cpp
+
+1. to do #-includes resolution and print the output to the terminal use:
+
+	g++ -Wall -E program1.cpp
+
+	Memorizing: 'E' like 'expand'
+
+
+
+2. to stop the compilation proces after the translation by compiler of the C++ code into assembler code use:
+
+
+	g++ -Wall -S program1.cpp
+
+
+
+3. to stop the compilation process after the assembly completes use:
+
+	g++ -Wall -c program1.cpp
+
+
+
+4. to do the linking and get the runnable program one of the following commands can be used:
+
+	g++ -Wall -o program1 program.cpp	(1)
+	g++ -Wall -o program1 program.o		(2)
+
+Obviously, the first command can be used when we don't have an object file yet, whereas the second one when there already is a compiled object file.
+
+
+Command 'g++' popular flags:
+	1. -Wall
+		"warn all": show almost all the warnings
+	2. -E:
+		preprocess only: do not compile, assemble or link
+	3. -S:
+		compile only: do not assemble or link
+	4. -c:
+		compile and assemble but do not link
+	5. -o <file>
+		place the output into <file>
+

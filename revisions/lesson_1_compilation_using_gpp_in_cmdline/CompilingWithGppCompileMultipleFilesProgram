@@ -1,0 +1,19 @@
+
+This is an instruction of how to compile a simple two-argument calculator.
+The program consists of the following files:
+	A. MultipleFilerProgram.cpp -- this cpp files contains include directive of the 
+	   header file HelperFunctions.hpp 
+	B. HelperFunctions.hpp --- header file with the declarations of the functions 
+	   defined in the HelperFunctions.cpp file
+	C. HelperFunctions.cpp -- file with the implementation of the functions declare in the
+	   file HelperFunctions.hpp
+
+The way to go about compiling this programs is the following:
+
+	1. g++ -Wall -c HelperFunctions.cpp
+	2. g++ -Wall -c MultipleFilesProgram.cpp
+	3. g++ -Wall HelperFunctions.o MultipleFilesProgram.o -o ProgramFile
+
+This means that one way to go is to first run the creation of object file on the compounding
+.cpp files and then run the linking on the created object files. 
+
